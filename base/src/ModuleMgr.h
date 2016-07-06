@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -21,14 +21,14 @@
 namespace ff
 {
 	/*
-		Ä£¿é¹ÜÀíÆ÷
+		æ¨¡å—ç®¡ç†å™¨
 	*/
 	class ModuleMgr : public Singleton<ModuleMgr>
 	{
 	public:
 		void tick(int32_t delta);
 
-		// ±ØĞëÔÚÌí¼ÓÄ£¿éÇ°£¬Ìí¼ÓÄ£¿é¹ÜÀíÆ÷
+		// å¿…é¡»åœ¨æ·»åŠ æ¨¡å—å‰ï¼Œæ·»åŠ æ¨¡å—ç®¡ç†å™¨
 		template<typename CMPMGR>
 		bool addComponentMgr()
 		{
@@ -37,7 +37,7 @@ namespace ff
 			return true;
 		}
 
-		/*×¢²áÄ£¿é*/
+		/*æ³¨å†Œæ¨¡å—*/
 		template<typename MODULE>
 		MODULE*	registerModule()
 		{
@@ -50,7 +50,7 @@ namespace ff
 			return mod;
 		}
 
-		/*»ñÈ¡×¢²áµÄÄ£¿é*/
+		/*è·å–æ³¨å†Œçš„æ¨¡å—*/
 		template<typename MODULE>
 		MODULE*	getModule()
 		{
@@ -58,7 +58,7 @@ namespace ff
 		}
 
 		IModule*	getModule(std::string name);
-		/*×¢²áÄ£¿é£¬order¾ö¶¨Ä£¿éinitializeµÄµ÷ÓÃË³Ğò*/
+		/*æ³¨å†Œæ¨¡å—ï¼Œorderå†³å®šæ¨¡å—initializeçš„è°ƒç”¨é¡ºåº*/
 		IModule*	registerModule(std::string name, IModule* module, int32_t order);
 
 		bool initialize();
@@ -67,7 +67,7 @@ namespace ff
 		void preStartLoop();
 
 	private:
-		// ×¢²áµÄËùÓĞÄ£¿é
+		// æ³¨å†Œçš„æ‰€æœ‰æ¨¡å—
 		std::map<std::string, IModule*>	mModules;
 		std::multimap<int32_t, IModule*>	mOrderModules;
 

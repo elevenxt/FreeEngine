@@ -1,4 +1,4 @@
-/*
+﻿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -16,7 +16,7 @@
 
 namespace ff
 {
-	// ϵͳ��־
+	// 系统日志
 	class Syslog : public Singleton<Syslog>
 	{
 	public:

@@ -25,7 +25,7 @@
 int32_t init_net_handle(struct ut_net_t* net)
 {
 	net->epoll_handle = epoll_create(65536);
-	return net->epoll_handle > 0 ? 0 : -ut_lasterror();
+	return net->epoll_handle > 0 ? 0 : -ut_wsalasterror();
 }
 
 void uninit_net_handle(struct ut_net_t* net)
@@ -49,7 +49,7 @@ int32_t do_deliver_socket(struct ut_net_t* net, struct ut_channel_t* channel)
 
 	err = epoll_ctl(net->epoll_handle, EPOLL_CTL_ADD, channel->sock, &eevent);
 
-	return err == 0?0:-ut_lasterror();
+	return err == 0?0:-ut_wsalasterror();
 }
 
 static void do_lost_connection(struct ut_channel_t* channel)
@@ -102,7 +102,7 @@ int32_t ut_net_pool_once(struct ut_net_t* net, int32_t weight, int32_t waittime)
 		}
 	}
 
-	return wait_num>=0?wait_num:-ut_lasterror();
+	return wait_num>=0?wait_num:-ut_wsalasterror();
 }
 
 #endif

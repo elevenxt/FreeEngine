@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -18,17 +18,17 @@ namespace ff
 	class StringUtil
 	{
 	public:
-		// ×Ö·û´®ÇĞ·Ö
+		// å­—ç¬¦ä¸²åˆ‡åˆ†
 		static std::vector<std::string> split(const std::string& val, const std::string& spl);
 
-		// ×Ö·û´®Ìæ»»
+		// å­—ç¬¦ä¸²æ›¿æ¢
 		static std::string replace(const std::string& str_src, const std::string& old_value, const std::string& new_value);
-		// ×ª»»Îª´óĞ´
+		// è½¬æ¢ä¸ºå¤§å†™
 		static std::string toupper(const std::string& str);
-		// ×ª»»ÎªĞ¡Ğ´
+		// è½¬æ¢ä¸ºå°å†™
 		static std::string tolower(const std::string& str);
 
-		// ×Ö·û´®Á¬½Ó
+		// å­—ç¬¦ä¸²è¿æ¥
 		template<typename Container>
 		static std::string connect(Container value, const std::string &delim)
 		{

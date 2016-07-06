@@ -124,7 +124,7 @@ void	ut_mutex_delete(ut_mutex_t*	a_mutex)
 
 	DeleteCriticalSection(&a_mutex->mutex);
 
-	free(a_mutex);
+	UT_DELETE(a_mutex);
 }
 
 void	ut_mutex_lock(ut_mutex_t*	a_mutex)
@@ -221,9 +221,9 @@ void	ut_thread_join(ut_thread_t* a_thread)
 	pthread_join(a_thread->handle, 0);
 }
 
-unsigned long ut_thread_self(void) 
+thread_id_t ut_thread_self(void)
 {
-	return (unsigned long) pthread_self();
+	return (thread_id_t) pthread_self();
 }
 
 void	ut_sleep(int32_t milliseconds)

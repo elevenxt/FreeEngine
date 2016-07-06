@@ -1,4 +1,4 @@
-
+ï»¿
 /*
 ** Free game server engine
 **
@@ -20,7 +20,7 @@
 namespace ff
 {
 	/*
-		Ä£¿éÊµÏÖ´Ë½Ó¿Úºó£¬runOnce»áÔÚÁíÒ»¸öÏß³ÌÖĞµ÷ÓÃ£¬·µ»ØÖµÊÇÁ½´ÎrunOnceµÄĞİÃß¼ä¸ô
+		æ¨¡å—å®ç°æ­¤æ¥å£åï¼ŒrunOnceä¼šåœ¨å¦ä¸€ä¸ªçº¿ç¨‹ä¸­è°ƒç”¨ï¼Œè¿”å›å€¼æ˜¯ä¸¤æ¬¡runOnceçš„ä¼‘çœ é—´éš”
 	*/
 	class ComponentRunnable
 	{
@@ -45,7 +45,7 @@ namespace ff
 		};
 		static int32_t	worker(ComRunnable* com);
 
-		// ÓĞÏß³ÌµÄÄ£¿é
+		// æœ‰çº¿ç¨‹çš„æ¨¡å—
 		std::vector<ComRunnable*>	mRunnables;
 	};
 }

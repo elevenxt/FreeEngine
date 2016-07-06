@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -41,7 +41,7 @@ void Framework::startLoop()
 
 	static int64_t bt = Timer::getTickCount();
 	int64_t ct = 0;
-	SYSLOG_NOTICE("¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï {} {} Server start	¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï",  (char)1, (char)2);
+	SYSLOG_NOTICE("â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜… {} {} Server start	â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…",  (char)1, (char)2);
 	while (true)
 	{
 		ct = Timer::getTickCount();

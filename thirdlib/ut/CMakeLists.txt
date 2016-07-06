@@ -23,4 +23,3 @@ target_link_libraries(${PROJ_NAME} Mswsock)
 endif(UNIX)
 
 set_target_properties(${PROJ_NAME} PROPERTIES FOLDER "libs") 
-

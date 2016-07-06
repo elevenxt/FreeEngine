@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -14,7 +14,7 @@
 namespace ff
 {
 	/*
-		ÈÕÖ¾½Ó¿Ú
+		æ—¥å¿—æ¥å£
 	*/
 	class Log
 	{

@@ -16,7 +16,7 @@ __C_BEGIN_DECLS
 typedef struct ut_thread		ut_thread_t;
 typedef struct ut_mutex			ut_mutex_t;
 typedef struct ut_spinlock		ut_spinlock_t;
-typedef unsigned long			thread_id_t;
+typedef long long			thread_id_t;
 typedef void* thread_handle;
 
 /**

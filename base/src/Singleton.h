@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -12,7 +12,7 @@
 
 namespace ff
 {
-	// µ¥¼ş»ùÀà
+	// å•ä»¶åŸºç±»
 	template<typename T>
 	class Singleton
 	{
@@ -30,7 +30,7 @@ namespace ff
 		virtual ~Singleton(){};
 
 	public:
-		//  ËùÓĞµ¥¼ş±ØĞëÔÚÖ÷Ïß³ÌÖĞÊµÀı»¯
+		//  æ‰€æœ‰å•ä»¶å¿…é¡»åœ¨ä¸»çº¿ç¨‹ä¸­å®ä¾‹åŒ–
 		static T& instance()
 		{
 			static T t;

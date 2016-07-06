@@ -9,4 +9,3 @@ add_library(${PROJ_NAME} ${SRCLIST})
 include_directories( "../otherlib/include" )
 
 set_target_properties(${PROJ_NAME} PROPERTIES FOLDER "libs")
-

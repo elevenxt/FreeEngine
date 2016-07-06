@@ -1,17 +1,17 @@
-
+ï»¿
 /******************************************************************************
 	https://github.com/elevenxt/FreeEngine
 
 	Copyright (C) 2016 Eleven.
 	License: The MIT License (http://www.opensource.org/licenses/mit-license.php)
 
-¡¡¡¡	  Permission is hereby granted, free of charge, to any person obtaining a copy
+ã€€ã€€	  Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal in
 	the Software without restriction, including without limitation the rights to use,
 	copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
 	Software, and to permit persons to whom the Software is furnished to do so,
 	subject to the following conditions:
-  ¡¡¡¡
+  ã€€ã€€
 		The above copyright notice and this permission notice shall be included in
 	all copies or substantial portions of the Software.
 
@@ -24,7 +24,7 @@
 ******************************************************************************/
 
 /*
-	ÏµÍ³ÈÕÖ¾¡¢Ìõ¼ş¼ì²éµÈ
+	ç³»ç»Ÿæ—¥å¿—ã€æ¡ä»¶æ£€æŸ¥ç­‰
 */
 
 #ifndef _US_BASE_UTIL_
@@ -35,7 +35,7 @@
 #include "Syslog.h"
 
 /*
-	Æ½Ì¨¼ì²é
+	å¹³å°æ£€æŸ¥
 */
 #if defined( _WIN64 )
 #define UT_PLATFORM_WINDOWS 0
@@ -55,7 +55,7 @@
 #endif
 
 /*
-	±àÒëÆ÷¼ì²é
+	ç¼–è¯‘å™¨æ£€æŸ¥
 */
 #ifdef _MSC_VER
 #define COMPILER_MICROSOFT 0
@@ -101,7 +101,7 @@
 		} while (false)
 
 /*
-	ÏµÍ³ÈÕÖ¾
+	ç³»ç»Ÿæ—¥å¿—
 */
 #define SYSLOG_TRACE(...)	SYSLOG(L_TRACE, __VA_ARGS__)
 #define SYSLOG_DEBUG(...)	SYSLOG(L_DEBUG, __VA_ARGS__)
@@ -111,9 +111,9 @@
 #define SYSLOG_FATAL(...)	SYSLOG(L_FATAL, __VA_ARGS__)
 
 /*
-	³£ÓÃÌõ¼ş¼ì²é
-	CHECKÓÃÓÚÏµÍ³ÍâÌõ¼ş¼ì²é,¾ÍÊÇÈë²Î¼ì²é
-	VERIFYÊÇÏµÍ³×ÔÉí³öÁËbug£¬±ØĞëĞŞ¸´
+	å¸¸ç”¨æ¡ä»¶æ£€æŸ¥
+	CHECKç”¨äºç³»ç»Ÿå¤–æ¡ä»¶æ£€æŸ¥,å°±æ˜¯å…¥å‚æ£€æŸ¥
+	VERIFYæ˜¯ç³»ç»Ÿè‡ªèº«å‡ºäº†bugï¼Œå¿…é¡»ä¿®å¤
 */
 #define SYS_CHECK_RV(CON, RV)	\
 	do{	\

@@ -54,7 +54,7 @@ int32_t ut_sock_lasterror();
 int32_t ut_sock_send(ut_sock_t sock, const char* data, int32_t size);
 int32_t ut_sock_recv(ut_sock_t sock, char* data, int32_t size);
 int32_t ut_sock_sendto(ut_sock_t sock, int32_t ip, int32_t port, const char* data, int32_t size);
-int32_t ut_sock_recvfrom(ut_sock_t sock, int32_t ip, int32_t port, char* data, int32_t size);
+int32_t ut_sock_recvfrom(ut_sock_t sock, int32_t* ip, int32_t* port, char* data, int32_t size);
 
 int32_t ut_sock_reuseaddr(ut_sock_t sock);
 

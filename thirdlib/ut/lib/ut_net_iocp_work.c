@@ -32,7 +32,7 @@ int32_t init_net_handle(struct ut_net_t* net)
 	return 0;
 
 FAIL:
-	err = -ut_lasterror();
+	err = -ut_wsalasterror();
 	WSACleanup();
 	return err;
 }
@@ -74,7 +74,7 @@ int32_t do_deliver_socket(struct ut_net_t* net, struct ut_channel_t* channel)
 	return 0;
 
 FAIL:
-	return -ut_lasterror();
+	return -ut_wsalasterror();
 }
 
 int32_t do_sync_recv(struct ut_net_t* net, struct ut_channel_t* channel)
@@ -95,7 +95,7 @@ int32_t do_sync_recv(struct ut_net_t* net, struct ut_channel_t* channel)
 		, &io_size, &flags, &channel->io_overlapped.overlapped, NULL);
 	if ((ret_val == SOCKET_ERROR) && (WSAGetLastError() != WSA_IO_PENDING))
 	{
-		return -ut_lasterror();
+		return -ut_wsalasterror();
 	}
 
 	return 0;

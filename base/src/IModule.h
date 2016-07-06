@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -11,17 +11,17 @@
 namespace ff
 {
 	/*
-		ËùÓĞÄ£¿éµÄ»ùÀà
+		æ‰€æœ‰æ¨¡å—çš„åŸºç±»
 	*/
 	class IModule
 	{
 	public:
 		virtual ~IModule() {}
-		/*Ä£¿é×ÔÉíµÄ³õÊ¼»¯º¯Êı£¬´Ëº¯ÊıÄÚ²»Òªµ÷ÓÃÆäËüÄ£¿éµÄ³ÉÔ±º¯Êı*/
+		/*æ¨¡å—è‡ªèº«çš„åˆå§‹åŒ–å‡½æ•°ï¼Œæ­¤å‡½æ•°å†…ä¸è¦è°ƒç”¨å…¶å®ƒæ¨¡å—çš„æˆå‘˜å‡½æ•°*/
 		virtual bool initialize()	= 0;
-		/*ÏµÍ³¼´½«¹Ø±ÕÊ±µ÷ÓÃ*/
+		/*ç³»ç»Ÿå³å°†å…³é—­æ—¶è°ƒç”¨*/
 		virtual	void finalize()		= 0;
-		/*ÏµÍ³Ö÷Ñ­»·¿ªÊ¼Ç°µ÷ÓÃ*/
+		/*ç³»ç»Ÿä¸»å¾ªç¯å¼€å§‹å‰è°ƒç”¨*/
 		virtual void preStartLoop() {};
 	};
 }

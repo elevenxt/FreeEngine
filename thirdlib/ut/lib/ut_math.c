@@ -30,7 +30,7 @@ int32_t		ut_rand_range(rand_handle_t* sh, int32_t min, int32_t max)
 		return min;
 	}
 
-	return ut_rand(sh)/(max-min) + min;
+	return ut_rand(sh)%(max-min) + min;
 }
 
 int32_t		ut_min(int32_t a, int32_t b)

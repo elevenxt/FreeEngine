@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -21,7 +21,7 @@
 namespace ff
 {
 	/*
-		Ä£¿éÊµÏÖ´Ë½Ó¿Úºó£¬loopTick»áÔÚÖ÷Ïß³ÌÖĞµ÷ÓÃ£¬·µ»ØÖµÊÇÁ½´Îµ÷ÓÃ¼ä¸ô
+		æ¨¡å—å®ç°æ­¤æ¥å£åï¼ŒloopTickä¼šåœ¨ä¸»çº¿ç¨‹ä¸­è°ƒç”¨ï¼Œè¿”å›å€¼æ˜¯ä¸¤æ¬¡è°ƒç”¨é—´éš”
 	*/
 	class ComponentTick
 	{
@@ -44,7 +44,7 @@ namespace ff
 			int32_t			gap;
 			int32_t			left;
 		};
-		// ËùÓĞ´¥·¢Æ÷
+		// æ‰€æœ‰è§¦å‘å™¨
 		std::vector<ComTicker>		mTickers;
 	};
 }

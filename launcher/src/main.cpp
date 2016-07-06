@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -31,25 +31,25 @@
 
 #pragma comment( lib, "DbgHelp" )
 
-// ´´½¨DumpÎÄ¼ş
+// åˆ›å»ºDumpæ–‡ä»¶
 void CreateDumpFile(const std::string& strDumpFilePathName, EXCEPTION_POINTERS* pException)
 {
-	// ´´½¨DumpÎÄ¼ş
+	// åˆ›å»ºDumpæ–‡ä»¶
 	HANDLE hDumpFile = CreateFile(strDumpFilePathName.c_str(), GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 
-	// DumpĞÅÏ¢
+	// Dumpä¿¡æ¯
 	MINIDUMP_EXCEPTION_INFORMATION dumpInfo;
 	dumpInfo.ExceptionPointers = pException;
 	dumpInfo.ThreadId = GetCurrentThreadId();
 	dumpInfo.ClientPointers = TRUE;
 
-	// Ğ´ÈëDumpÎÄ¼şÄÚÈİ
+	// å†™å…¥Dumpæ–‡ä»¶å†…å®¹
 	MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(), hDumpFile, MiniDumpNormal, &dumpInfo, NULL, NULL);
 
 	CloseHandle(hDumpFile);
 }
 
-// ´¦ÀíUnhandled ExceptionµÄ»Øµ÷º¯Êı
+// å¤„ç†Unhandled Exceptionçš„å›è°ƒå‡½æ•°
 long ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 {
 	time_t t = time(0);

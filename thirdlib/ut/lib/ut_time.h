@@ -13,22 +13,6 @@
 
 __C_BEGIN_DECLS
 
-typedef struct _ut_time
-{
-	int32_t year;
-	int32_t month;
-	int32_t day;
-	int32_t hour;
-	int32_t minute;
-	int32_t second;
-} ut_time_t;
-
-/**
-* 获取当前系统本地时间
-*
-* @return 当前系统本地时间
-*/
-ut_time_t ut_gettime();
 
 /**
 * 获取相对毫秒计数值

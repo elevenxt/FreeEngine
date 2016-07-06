@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ** Free game server engine
 **
 ** Copyright (C) 2016 Eleven. See Copyright Notice in base.h
@@ -14,12 +14,12 @@
 namespace ff
 {
 	/*
-		Ä£¿é×é¼ş¹ÜÀíÆ÷
+		æ¨¡å—ç»„ä»¶ç®¡ç†å™¨
 	*/
 	class IComponentMgr
 	{
 	public:
-		/*Ö÷Ïß³ÌÃ¿Õê»áµ÷ÓÃtick*/
+		/*ä¸»çº¿ç¨‹æ¯è´ä¼šè°ƒç”¨tick*/
 		virtual void tick(int32_t delta) = 0;
 		virtual bool registerModule(std::string name, IModule* module) = 0;
 		virtual bool initialize() = 0;
