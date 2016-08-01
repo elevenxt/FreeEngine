@@ -1,6 +1,8 @@
 
 #include "luaoptutil.h"
 #include "StringUtil.h"
+#include <cinttypes>
+
 
 void lualibs_open(lua_State* L, const luaL_Reg* lib)
 {

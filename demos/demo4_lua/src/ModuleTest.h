@@ -10,7 +10,7 @@
 #define _US_MODULE_TEST_
 
 #include <string>
-
+#include <cinttypes>
 #include "IModule.h"
 
 

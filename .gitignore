@@ -1,1 +1,6 @@
 /.svn
+
+/demos/unity_demo1_chat/proto/bin
+/demos/unity_demo1_chat/unity5_3_client/chat_demo/*
+!/demos/unity_demo1_chat/unity5_3_client/chat_demo/Assets/
+!/demos/unity_demo1_chat/unity5_3_client/chat_demo/ProjectSettings/

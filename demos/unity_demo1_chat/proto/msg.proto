@@ -1,0 +1,26 @@
+package FreeEngineMsg;
+
+message FEMsg
+{
+	enum MSG_Type
+	{
+		Info = 1;
+		Talk = 2;
+	}
+	required MSG_Type msgtype=1;
+	optional FEMsg_Info gameInfo=2;
+	optional FEMsg_Talk talk=3;
+}
+
+message FEMsg_Info
+{
+	optional string version=1;
+	optional string newVersionURL=2;
+	optional string protoVersion=3;
+}
+
+message FEMsg_Talk
+{
+	optional string sender=1;
+	optional string content=2;
+}

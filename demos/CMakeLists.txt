@@ -14,3 +14,5 @@ add_subdirectory("demo6_actor")
 add_subdirectory("demo7_chatclient")
 add_subdirectory("demo7_chatserver")
 
+add_subdirectory("unity_demo1_chat/chatserver")
+
