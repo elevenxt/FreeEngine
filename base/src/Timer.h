@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_TIMER_
-#define _US_TIMER_
+#ifndef _FF_TIMER_
+#define _FF_TIMER_
 
 #include <cinttypes>
 #include <chrono>

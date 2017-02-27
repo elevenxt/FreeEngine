@@ -26,7 +26,7 @@ namespace ff
 	class ModuleActor : public IModule, public ComponentTick
 	{
 	public:
-		virtual bool initialize();
+		virtual bool initialize(ModuleMgr& mgr);
 		virtual	void finalize();
 
 		bool	registerActor(const std::string& name, Actor* actor);

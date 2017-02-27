@@ -1,0 +1,79 @@
+
+message	cs_connect
+{
+}
+
+message cs_disconnect
+{
+}
+
+message 	cs_login
+{
+	optional 	bytes 	id	= 1;
+}
+
+message	cs_talk
+{
+	optional bytes to = 1;
+	optional bytes msg = 3;
+}
+
+message cs_buy_hero
+{
+	optional int32 idx = 1;
+}
+
+message cs_shop_item
+{
+	optional int32 idx = 1;
+}
+
+message cs_charge
+{
+	optional int32 diamond = 1;
+}
+
+message cs_pack_hero
+{
+	optional int32 action = 1;
+	optional int32 slot = 2;
+}
+
+message cs_select_teammember
+{
+	optional int32 teamslot = 1;
+	optional int32 packslot = 2;
+}
+
+message cs_challenge_mission
+{
+	optional int32 type = 1;
+	optional int32 level = 2;
+}
+
+message cs_friend_add
+{
+	optional bytes name = 1;
+}
+
+message cs_friend_mobility
+{
+	optional int32 action = 1;
+	optional int32 idx = 2;
+}
+
+message csmsg
+{
+	optional cs_connect		connect = 1;
+	optional cs_disconnect	disconnect = 2;
+	optional cs_login	login = 3;
+	optional cs_charge	charge = 4;
+	optional cs_buy_hero buy_hero = 5;
+	optional cs_shop_item shop_item = 6;
+	optional cs_pack_hero pack_hero = 7;
+	optional cs_select_teammember select_teammember = 8;
+	optional cs_challenge_mission challenge_mission = 9;
+	optional cs_talk talk = 10;
+	optional cs_friend_add friend_add = 11;
+	optional cs_friend_mobility friend_mobility = 12;
+}

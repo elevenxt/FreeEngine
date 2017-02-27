@@ -31,19 +31,15 @@ namespace ff
 			virtual bool initialize()
 			{
 				// 先注册所有模块
-				ff::ModuleMgr& mgr = ff::ModuleMgr::instance();
-				SYS_VERIFY_RV(mgr.registerModule<ModuleTest>(), false);
-				SYS_VERIFY_RV(mgr.registerModule<ff::ModuleActor>(), false);
-
-				// 初始化模块管理器
-				SYS_VERIFY_RV(mgr.initialize(), false);
+				SYS_VERIFY_RV(mModuleMgr.registerModule<ModuleTest>(), false);
+				SYS_VERIFY_RV(mModuleMgr.registerModule<ff::ModuleActor>(), false);
 
 				return true;
 			}
 
 			virtual void finalize()
 			{
-				ff::ModuleMgr::instance().finalize();
+
 			}
 		};
 

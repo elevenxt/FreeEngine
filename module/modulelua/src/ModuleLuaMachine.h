@@ -17,7 +17,7 @@ namespace ff
 	class ModuleLuaMachine : public IModule, public ComponentTick
 	{
 	public:
-		virtual bool initialize();
+		virtual bool initialize(ModuleMgr& mgr);
 		virtual	void finalize();
 		virtual void preStartLoop();
 

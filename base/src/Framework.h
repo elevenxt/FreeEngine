@@ -6,8 +6,8 @@
 
 
 
-#ifndef _US_FRAMEWORK_H_
-#define _US_FRAMEWORK_H_
+#ifndef _FF_FRAMEWORK_H_
+#define _FF_FRAMEWORK_H_
 
 #include <vector>
 #include <map>
@@ -34,6 +34,8 @@ namespace ff
 	protected:
 		virtual bool initialize() = 0;
 		virtual void finalize() = 0;
+
+		ModuleMgr mModuleMgr;
 	};
 }
 

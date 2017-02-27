@@ -15,10 +15,11 @@
 #include "ActorNormalWorker.h"
 
 using namespace ff::demo;
+using namespace ff;
 
-bool ModuleTest::initialize()
+bool ModuleTest::initialize(ModuleMgr& mgr)
 {
-	ff::ModuleActor* pActor = ff::ModuleMgr::instance().getModule<ff::ModuleActor>();
+	ff::ModuleActor* pActor = mgr.getModule<ff::ModuleActor>();
 	SYS_VERIFY_RV(pActor != nullptr, false);
 	/*注册4个普通的任务处理*/
 	for (int32_t i=0; i<4; i++)

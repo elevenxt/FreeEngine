@@ -5,7 +5,7 @@
 using namespace ff;
 
 
-bool ModuleLuaMachine::initialize()
+bool ModuleLuaMachine::initialize(ModuleMgr& mgr)
 {
 	return true;
 }

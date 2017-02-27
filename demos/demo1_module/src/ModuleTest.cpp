@@ -11,8 +11,9 @@
 
 
 using namespace ff::demo;
+using namespace ff;
 
-bool ModuleTest::initialize()
+bool ModuleTest::initialize(ModuleMgr& mgr)
 {
 	SYSLOG_DEBUG("ModuleTest initialize.");
 	return true;

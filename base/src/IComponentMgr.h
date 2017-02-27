@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_MODULE_COMPONENT_MGR_
-#define _US_MODULE_COMPONENT_MGR_
+#ifndef _FF_MODULE_COMPONENT_MGR_
+#define _FF_MODULE_COMPONENT_MGR_
 
 #include <cinttypes>
 #include <string>

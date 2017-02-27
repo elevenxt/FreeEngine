@@ -10,6 +10,7 @@
 #define _US_MODULE_TEST_
 
 #include <string>
+#include <cinttypes>
 
 #include "IModule.h"
 
@@ -21,7 +22,7 @@ namespace ff
 		class ModuleTest : public ff::IModule
 		{
 		public:
-			virtual bool initialize();
+			virtual bool initialize(ModuleMgr& mgr);
 			virtual	void finalize();
 			virtual void preStartLoop();
 

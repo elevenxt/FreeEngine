@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_LOG_CONSOLE_
-#define _US_LOG_CONSOLE_
+#ifndef _FF_LOG_CONSOLE_
+#define _FF_LOG_CONSOLE_
 
 #include "ILog.h"
 

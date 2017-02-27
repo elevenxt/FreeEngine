@@ -14,14 +14,15 @@
 #include "LuaExportFuncs.h"
 
 using namespace ff::demo;
+using namespace ff;
 
-bool ModuleTest::initialize()
+bool ModuleTest::initialize(ModuleMgr& mgr)
 {
 	// 注册2个函数到lua中
 	LuaExportFuncs::instance().registerFunc("test.func1", this, &ModuleTest::testFunc1);
 	LuaExportFuncs::instance().registerFunc("test.func2", this, &ModuleTest::testFunc2);
 
-	ModuleLuaMachine* pLuaMachine = ModuleMgr::instance().getModule<ModuleLuaMachine>();
+	ModuleLuaMachine* pLuaMachine = mgr.getModule<ModuleLuaMachine>();
 	SYS_VERIFY_RV(pLuaMachine != nullptr, false);
 	// 设置入口脚本文件
 	pLuaMachine->initLuaMachine("script/test.lua");

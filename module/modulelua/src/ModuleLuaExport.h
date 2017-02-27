@@ -16,7 +16,7 @@ namespace ff
 	class ModuleLuaExport : public IModule
 	{
 	public:
-		virtual bool initialize();
+		virtual bool initialize(ModuleMgr& mgr);
 		virtual	void finalize();
 	};
 }

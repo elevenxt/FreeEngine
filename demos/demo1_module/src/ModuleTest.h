@@ -18,7 +18,7 @@ namespace ff
 		class ModuleTest : public ff::IModule
 		{
 		public:
-			virtual bool initialize();
+			virtual bool initialize(ModuleMgr& mgr);
 			virtual	void finalize();
 		};
 	}

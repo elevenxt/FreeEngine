@@ -1,6 +1,9 @@
 
+#include <cinttypes>
+
 #include "luaoptutil.h"
 #include "StringUtil.h"
+
 
 void lualibs_open(lua_State* L, const luaL_Reg* lib)
 {
@@ -11,16 +14,16 @@ void lualibs_open(lua_State* L, const luaL_Reg* lib)
 	}
 }
 
-int invalid_newindex(lua_State* L)
+int32_t invalid_newindex(lua_State* L)
 {
 	lua_pushstring(L, "new index error");
 	lua_error(L);
 	return 0;
 }
 
-int lua_set_global(lua_State *L, const char* tablse)
+int32_t lua_set_global(lua_State *L, const char* tablse)
 {
-	int ctop = lua_gettop(L) - 1;
+	int32_t ctop = lua_gettop(L) - 1;
 	std::vector<std::string> tables = ff::StringUtil::split(tablse, ".");
 	lua_getglobal(L, tables[0].c_str());
 	if (!lua_istable(L, -1) && !lua_isnil(L, -1))
@@ -69,9 +72,9 @@ int lua_set_global(lua_State *L, const char* tablse)
 	return 0;
 }
 
-int lua_get_global(lua_State *L, const char* table)
+int32_t lua_get_global(lua_State *L, const char* table)
 {
-	int ctop = lua_gettop(L);
+	int32_t ctop = lua_gettop(L);
 
 	std::vector<std::string> tables = ff::StringUtil::split(table, ".");
 	lua_getglobal(L, tables[0].c_str());
@@ -109,7 +112,7 @@ int lua_get_global(lua_State *L, const char* table)
 	return 0;
 }
 
-int lua_set_table(lua_State* L, const std::map<std::string, std::string>& vals)
+int32_t lua_set_table(lua_State* L, const std::map<std::string, std::string>& vals)
 {
 	for (std::map<std::string, std::string>::const_iterator iter = vals.begin();
 		iter != vals.end(); ++iter)

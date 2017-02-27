@@ -19,7 +19,7 @@ namespace ff
 		class ModuleTestComponent : public ff::IModule, public ff::ComponentTick
 		{
 		public:
-			virtual bool initialize();
+			virtual bool initialize(ModuleMgr& mgr);
 			virtual	void finalize();
 
 		private:

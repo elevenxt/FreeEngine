@@ -37,7 +37,7 @@ Framework* Framework::instance()
 
 void Framework::startLoop()
 {
-	ModuleMgr::instance().preStartLoop();
+	mModuleMgr.preStartLoop();
 
 	static int64_t bt = Timer::getTickCount();
 	int64_t ct = 0;
@@ -51,17 +51,20 @@ void Framework::startLoop()
 			continue;
 		}
 
-		ModuleMgr::instance().tick(ct - bt);
+		mModuleMgr.tick(ct - bt);
 		bt = ct;
 	}
 }
 
 bool Framework::doInit()
 {	
-	SYS_VERIFY_RV(ModuleMgr::instance().addComponentMgr<ComponentTickMgr>(), false);
-	SYS_VERIFY_RV(ModuleMgr::instance().addComponentMgr<ComponentRunnableMgr>(), false);
+	SYS_VERIFY_RV(mModuleMgr.addComponentMgr<ComponentTickMgr>(), false);
+	SYS_VERIFY_RV(mModuleMgr.addComponentMgr<ComponentRunnableMgr>(), false);
 
 	SYS_VERIFY_RV(initialize(), false);
+
+	// 初始化模块管理器
+	SYS_VERIFY_RV(mModuleMgr.initialize(), false);
 
 	SYSLOG_TRACE("Framework initialize success.");
 
@@ -71,5 +74,6 @@ bool Framework::doInit()
 void Framework::doUninit()
 {
 	finalize();
+	mModuleMgr.finalize();
 	SYSLOG_TRACE("Framework finalize over.");
 }

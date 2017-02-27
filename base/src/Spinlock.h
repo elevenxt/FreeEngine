@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_SPINLOCK_
-#define _US_SPINLOCK_
+#ifndef _FF_SPINLOCK_
+#define _FF_SPINLOCK_
 
 #include <atomic>
 #include <memory>

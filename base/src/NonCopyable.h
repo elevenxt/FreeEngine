@@ -6,8 +6,8 @@
 
 
 
-#ifndef _US_NONCOPYABLE_
-#define _US_NONCOPYABLE_
+#ifndef _FF_NONCOPYABLE_
+#define _FF_NONCOPYABLE_
 
 namespace ff
 {

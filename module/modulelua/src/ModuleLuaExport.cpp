@@ -2,12 +2,10 @@
 #include "LuaExportFuncs.h"
 
 #include "ModuleMgr.h"
-#include "ModuleNetService.h"
-#include "NetService.h"
 
 using namespace ff;
 
-bool ModuleLuaExport::initialize()
+bool ModuleLuaExport::initialize(ModuleMgr& mgr)
 {
 	// ×¢²áÈÕÖ¾º¯Êý
 	LuaExportFuncs::instance().registerFunc("log.trace", SyslogTrace);

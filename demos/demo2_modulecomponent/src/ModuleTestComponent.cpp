@@ -11,8 +11,9 @@
 
 
 using namespace ff::demo;
+using namespace ff;
 
-bool ModuleTestComponent::initialize()
+bool ModuleTestComponent::initialize(ModuleMgr& mgr)
 {
 	mTick = 0;
 	SYSLOG_DEBUG("ModuleTestComponent initialize.");

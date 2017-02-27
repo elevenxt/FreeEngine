@@ -1,0 +1,251 @@
+
+
+
+message    PlayerSummaryProto
+{
+   //等级
+   optional int32 Level = 3;
+   //id
+   optional bytes Id = 1;
+   //角色名
+   optional bytes Name = 2;
+}
+
+message    _GuildGuildMemberProto
+{
+   optional   PlayerSummaryProto  _v0 = 1;
+   optional   PlayerSummaryProto  _v1 = 2;
+   optional   PlayerSummaryProto  _v2 = 3;
+   optional   PlayerSummaryProto  _v3 = 4;
+   optional   PlayerSummaryProto  _v4 = 5;
+   optional   PlayerSummaryProto  _v5 = 6;
+   optional   PlayerSummaryProto  _v6 = 7;
+   optional   PlayerSummaryProto  _v7 = 8;
+   optional   PlayerSummaryProto  _v8 = 9;
+   optional   PlayerSummaryProto  _v9 = 10;
+   optional   PlayerSummaryProto  _v10 = 11;
+   optional   PlayerSummaryProto  _v11 = 12;
+   optional   PlayerSummaryProto  _v12 = 13;
+   optional   PlayerSummaryProto  _v13 = 14;
+   optional   PlayerSummaryProto  _v14 = 15;
+   optional   PlayerSummaryProto  _v15 = 16;
+   optional   PlayerSummaryProto  _v16 = 17;
+   optional   PlayerSummaryProto  _v17 = 18;
+   optional   PlayerSummaryProto  _v18 = 19;
+   optional   PlayerSummaryProto  _v19 = 20;
+   optional   PlayerSummaryProto  _v20 = 21;
+   optional   PlayerSummaryProto  _v21 = 22;
+   optional   PlayerSummaryProto  _v22 = 23;
+   optional   PlayerSummaryProto  _v23 = 24;
+   optional   PlayerSummaryProto  _v24 = 25;
+   optional   PlayerSummaryProto  _v25 = 26;
+   optional   PlayerSummaryProto  _v26 = 27;
+   optional   PlayerSummaryProto  _v27 = 28;
+   optional   PlayerSummaryProto  _v28 = 29;
+   optional   PlayerSummaryProto  _v29 = 30;
+}
+
+message    GuildProto
+{
+   //公会成员
+   optional _GuildGuildMemberProto GuildMember = 5;
+   //公会名
+   optional bytes Name = 3;
+   //公会等级
+   optional int32 Level = 4;
+   //公会id
+   optional int32 Id = 1;
+   //会长id
+   optional int32 Chairman = 2;
+}
+
+message    FriendInfoProto
+{
+   //基本信息
+   optional PlayerSummaryProto Info = 1;
+   //可以领取的移动力
+   optional int32 Mobility = 2;
+}
+
+message    BaseInfoProto
+{
+   //精英通关关卡
+   optional int32 EliteLine = 9;
+   //角色名
+   optional bytes Name = 2;
+   //角色等级
+   optional int32 Level = 3;
+   //主线通关关卡
+   optional int32 MainLine = 8;
+   //角色经验
+   optional int32 Exp = 7;
+   //最近离线时间
+   optional int32 OffTime = 10;
+   //钻石
+   optional int32 Diamond = 4;
+   //金币
+   optional int32 Gold = 5;
+   //移动力
+   optional int32 Mobility = 6;
+   //英雄通关关卡
+   optional int32 HeroLine = 11;
+   //角色id
+   optional bytes Id = 1;
+}
+
+message    SysInfoProto
+{
+   //服务器名
+   optional bytes ServerName = 2;
+   //服务器当前时间
+   optional int32 ServerTime = 1;
+   //在线用户数
+   optional int32 OnlinePlayer = 3;
+}
+
+message    CardProto
+{
+   //卡牌id
+   optional int32 Id = 1;
+   //队长技能
+   optional int32 LeaderSkill = 3;
+   //卡牌等级
+   optional int32 Level = 2;
+}
+
+message    _PackageSlotProto
+{
+   optional   CardProto  _v0 = 1;
+   optional   CardProto  _v1 = 2;
+   optional   CardProto  _v2 = 3;
+   optional   CardProto  _v3 = 4;
+   optional   CardProto  _v4 = 5;
+   optional   CardProto  _v5 = 6;
+   optional   CardProto  _v6 = 7;
+   optional   CardProto  _v7 = 8;
+   optional   CardProto  _v8 = 9;
+   optional   CardProto  _v9 = 10;
+   optional   CardProto  _v10 = 11;
+   optional   CardProto  _v11 = 12;
+   optional   CardProto  _v12 = 13;
+   optional   CardProto  _v13 = 14;
+   optional   CardProto  _v14 = 15;
+   optional   CardProto  _v15 = 16;
+   optional   CardProto  _v16 = 17;
+   optional   CardProto  _v17 = 18;
+   optional   CardProto  _v18 = 19;
+   optional   CardProto  _v19 = 20;
+   optional   CardProto  _v20 = 21;
+   optional   CardProto  _v21 = 22;
+   optional   CardProto  _v22 = 23;
+   optional   CardProto  _v23 = 24;
+   optional   CardProto  _v24 = 25;
+   optional   CardProto  _v25 = 26;
+   optional   CardProto  _v26 = 27;
+   optional   CardProto  _v27 = 28;
+   optional   CardProto  _v28 = 29;
+   optional   CardProto  _v29 = 30;
+   optional   CardProto  _v30 = 31;
+   optional   CardProto  _v31 = 32;
+   optional   CardProto  _v32 = 33;
+   optional   CardProto  _v33 = 34;
+   optional   CardProto  _v34 = 35;
+   optional   CardProto  _v35 = 36;
+   optional   CardProto  _v36 = 37;
+   optional   CardProto  _v37 = 38;
+   optional   CardProto  _v38 = 39;
+   optional   CardProto  _v39 = 40;
+   optional   CardProto  _v40 = 41;
+   optional   CardProto  _v41 = 42;
+   optional   CardProto  _v42 = 43;
+   optional   CardProto  _v43 = 44;
+   optional   CardProto  _v44 = 45;
+   optional   CardProto  _v45 = 46;
+   optional   CardProto  _v46 = 47;
+   optional   CardProto  _v47 = 48;
+   optional   CardProto  _v48 = 49;
+   optional   CardProto  _v49 = 50;
+   optional   CardProto  _v50 = 51;
+   optional   CardProto  _v51 = 52;
+   optional   CardProto  _v52 = 53;
+   optional   CardProto  _v53 = 54;
+   optional   CardProto  _v54 = 55;
+   optional   CardProto  _v55 = 56;
+   optional   CardProto  _v56 = 57;
+   optional   CardProto  _v57 = 58;
+   optional   CardProto  _v58 = 59;
+   optional   CardProto  _v59 = 60;
+}
+
+message    PackageProto
+{
+   //背包物品
+   optional _PackageSlotProto Slot = 1;
+}
+
+message    _TeamInfoTeamMemberProto
+{
+   optional   CardProto  _v0 = 1;
+   optional   CardProto  _v1 = 2;
+   optional   CardProto  _v2 = 3;
+   optional   CardProto  _v3 = 4;
+   optional   CardProto  _v4 = 5;
+}
+
+message    TeamInfoProto
+{
+   //团队成员
+   optional _TeamInfoTeamMemberProto TeamMember = 1;
+}
+
+message    _PlayerDataFriendsProto
+{
+   optional   FriendInfoProto  _v0 = 1;
+   optional   FriendInfoProto  _v1 = 2;
+   optional   FriendInfoProto  _v2 = 3;
+   optional   FriendInfoProto  _v3 = 4;
+   optional   FriendInfoProto  _v4 = 5;
+   optional   FriendInfoProto  _v5 = 6;
+   optional   FriendInfoProto  _v6 = 7;
+   optional   FriendInfoProto  _v7 = 8;
+   optional   FriendInfoProto  _v8 = 9;
+   optional   FriendInfoProto  _v9 = 10;
+   optional   FriendInfoProto  _v10 = 11;
+   optional   FriendInfoProto  _v11 = 12;
+   optional   FriendInfoProto  _v12 = 13;
+   optional   FriendInfoProto  _v13 = 14;
+   optional   FriendInfoProto  _v14 = 15;
+   optional   FriendInfoProto  _v15 = 16;
+   optional   FriendInfoProto  _v16 = 17;
+   optional   FriendInfoProto  _v17 = 18;
+   optional   FriendInfoProto  _v18 = 19;
+   optional   FriendInfoProto  _v19 = 20;
+   optional   FriendInfoProto  _v20 = 21;
+   optional   FriendInfoProto  _v21 = 22;
+   optional   FriendInfoProto  _v22 = 23;
+   optional   FriendInfoProto  _v23 = 24;
+   optional   FriendInfoProto  _v24 = 25;
+   optional   FriendInfoProto  _v25 = 26;
+   optional   FriendInfoProto  _v26 = 27;
+   optional   FriendInfoProto  _v27 = 28;
+   optional   FriendInfoProto  _v28 = 29;
+   optional   FriendInfoProto  _v29 = 30;
+}
+
+message    PlayerDataProto
+{
+   //背包
+   optional _PlayerDataFriendsProto Friends = 5;
+   //队伍信息
+   optional TeamInfoProto TeamInfo = 3;
+   //系统信息
+   optional SysInfoProto SysInfo = 1;
+   //背包
+   optional PackageProto Package = 4;
+   //基本信息
+   optional BaseInfoProto BaseInfo = 2;
+}
+
+
+
+

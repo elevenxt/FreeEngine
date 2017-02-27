@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_SYSLOG_
-#define _US_SYSLOG_
+#ifndef _FF_SYSLOG_
+#define _FF_SYSLOG_
 
 #include <cinttypes>
 

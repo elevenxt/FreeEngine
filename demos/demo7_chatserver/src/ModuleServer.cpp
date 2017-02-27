@@ -12,11 +12,11 @@
 #include "ModuleNetService.h"
 
 using namespace ff::demo;
+using namespace ff;
 
-
-bool ModuleServer::initialize()
+bool ModuleServer::initialize(ModuleMgr& mgr)
 {
-	ff::ModuleNetService* pNetService = ff::ModuleMgr::instance().getModule<ff::ModuleNetService>();
+	ff::ModuleNetService* pNetService = mgr.getModule<ff::ModuleNetService>();
 	SYS_VERIFY_RV(pNetService != nullptr, false);
 	mNet = pNetService->getService("chatserver");
 	SYS_VERIFY_RV(mNet->init(this, 1024), false);

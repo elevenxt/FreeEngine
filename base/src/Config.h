@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_CONFIG_
-#define _US_CONFIG_
+#ifndef _FF_CONFIG_
+#define _FF_CONFIG_
 
 #include <map>
 #include <string>

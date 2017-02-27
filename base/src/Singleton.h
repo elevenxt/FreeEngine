@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_SINGLETON_
-#define _US_SINGLETON_
+#ifndef _FF_SINGLETON_
+#define _FF_SINGLETON_
 
 #include <assert.h>
 

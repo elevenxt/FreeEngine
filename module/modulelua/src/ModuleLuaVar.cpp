@@ -5,7 +5,7 @@
 
 using namespace ff;
 
-bool ModuleLuaVar::initialize()
+bool ModuleLuaVar::initialize(ModuleMgr& mgr)
 {
 	return true;
 }

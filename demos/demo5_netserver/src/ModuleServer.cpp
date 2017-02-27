@@ -12,12 +12,12 @@
 #include "ModuleNetService.h"
 
 using namespace ff::demo;
+using namespace ff;
 
-
-bool ModuleServer::initialize()
+bool ModuleServer::initialize(ModuleMgr& mgr)
 {
 	/*获取网络服务器模块*/
-	ff::ModuleNetService* pNetService = ff::ModuleMgr::instance().getModule<ff::ModuleNetService>();
+	ff::ModuleNetService* pNetService = mgr.getModule<ff::ModuleNetService>();
 	SYS_VERIFY_RV(pNetService != nullptr, false);
 	/*创建一个网络服务*/
 	mNet = pNetService->getService("testserver");

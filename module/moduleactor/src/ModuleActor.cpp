@@ -11,7 +11,7 @@
 
 using namespace ff;
 
-bool ModuleActor::initialize()
+bool ModuleActor::initialize(ModuleMgr& mgr)
 {
 	return true;
 }

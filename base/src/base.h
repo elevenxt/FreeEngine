@@ -27,8 +27,8 @@
 	系统日志、条件检查等
 */
 
-#ifndef _US_BASE_UTIL_
-#define _US_BASE_UTIL_
+#ifndef _FF_BASE_UTIL_
+#define _FF_BASE_UTIL_
 
 #include <assert.h>
 #include "format.h"

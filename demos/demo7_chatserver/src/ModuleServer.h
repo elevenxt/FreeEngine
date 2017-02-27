@@ -22,7 +22,7 @@ namespace ff
 		class ModuleServer : public ff::IModule, public ff::NetService::Listener
 		{
 		public:
-			virtual bool initialize();
+			virtual bool initialize(ModuleMgr& mgr);
 			virtual	void finalize();
 
 		private:

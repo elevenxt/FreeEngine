@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_ILOG_
-#define _US_ILOG_
+#ifndef _FF_ILOG_
+#define _FF_ILOG_
 
 #include <string>
 

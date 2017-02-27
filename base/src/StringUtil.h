@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _UTS_STRINGUTIL_
-#define _UTS_STRINGUTIL_
+#ifndef _FF_STRINGUTIL_
+#define _FF_STRINGUTIL_
 
 #include <vector>
 #include <string>

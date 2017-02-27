@@ -11,7 +11,7 @@ include_directories(
 	${BASE_DIR}/src
 	${LAUNCHER_DIR}/src
 	${THIRDLIB_DIR}/cppformat-master
-	${MODULE_DIR}/modulenetservice/src
+	${MODULE_DIR}/modules/src
 	${THIRDLIB_DIR}/ut/lib
 	)
 
@@ -26,7 +26,7 @@ target_link_libraries(${PROJ_NAME}
 	base
 	launcher
 	cppformat
-	modulenetservice
+	modules
 	ut
 	${ws2_32}
 	${dl}

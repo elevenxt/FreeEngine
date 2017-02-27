@@ -38,10 +38,9 @@ bool ComponentRunnableMgr::registerModule(std::string name, IModule* module)
 	
 	ComRunnable* com = new ComRunnable();
 	com->running = true;
-	com->runnable = runnable;
-	com->worker = std::thread(std::bind(ComponentRunnableMgr::worker, com));	
-	
+	com->runnable = runnable;	
 	mRunnables.push_back(com);
+
 	SYSLOG_TRACE("find runnable component {}.", name);
 	
 	return true;
@@ -49,6 +48,11 @@ bool ComponentRunnableMgr::registerModule(std::string name, IModule* module)
 
 bool ComponentRunnableMgr::initialize()
 {
+	for (ComRunnable* com : mRunnables)
+	{
+		com->worker = std::thread(std::bind(ComponentRunnableMgr::worker, com));
+	}
+
 	return true;
 }
 

@@ -23,7 +23,7 @@ namespace ff
 		class ModuleClient : public ff::IModule, public ff::ComponentTick, public ff::NetService::Listener
 		{
 		public:
-			virtual bool initialize();
+			virtual bool initialize(ModuleMgr& mgr);
 			virtual	void finalize();
 
 		private:

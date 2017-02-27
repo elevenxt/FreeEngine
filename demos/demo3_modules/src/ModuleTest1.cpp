@@ -12,10 +12,11 @@
 
 
 using namespace ff::demo;
+using namespace ff;
 
-bool ModuleTest1::initialize()
+bool ModuleTest1::initialize(ModuleMgr& mgr)
 {
-	mModuleTest2 = ff::ModuleMgr::instance().getModule<ModuleTest2>();
+	mModuleTest2 = mgr.getModule<ModuleTest2>();
 	SYSLOG_DEBUG("ModuleTest initialize.");
 	return true;
 }

@@ -6,8 +6,8 @@
 
 
 
-#ifndef _US_SPINLOCK_GUARD
-#define _US_SPINLOCK_GUARD
+#ifndef _FF_SPINLOCK_GUARD
+#define _FF_SPINLOCK_GUARD
 
 
 #include "Spinlock.h"

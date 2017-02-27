@@ -1,0 +1,40 @@
+
+message sc_login_res
+{
+	optional int32 res = 1;
+}
+
+message sc_talk
+{
+	optional bytes from = 1;
+	optional int32 type = 2;
+	optional bytes msg = 3;
+}
+
+message sc_player_data
+{
+	optional bytes data = 1;
+}
+
+message sc_battle_action
+{
+	optional int32 act = 1;
+	optional int32 from = 2;
+	optional int32 to = 3;
+	optional int32 value = 4;
+}
+
+message sc_battle_report
+{
+	repeated int32 lchar = 1;
+	repeated int32 rchar = 2;
+	repeated sc_battle_action actions = 3;
+}
+
+message scmsg
+{
+	optional sc_login_res		login_res = 1;
+	optional sc_talk			talk = 2;
+	optional sc_player_data		player_data = 3;
+	optional sc_battle_report	battle_report = 4;
+}

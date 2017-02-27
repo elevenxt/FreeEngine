@@ -5,8 +5,8 @@
 */
 
 
-#ifndef _US_MODULE_MGR_
-#define _US_MODULE_MGR_
+#ifndef _FF_MODULE_MGR_
+#define _FF_MODULE_MGR_
 
 #include <map>
 #include <string>
@@ -14,16 +14,15 @@
 #include <cinttypes>
 #include <thread>
 
-#include "Singleton.h"
-#include "IModule.h"
-#include "IComponentMgr.h"
-
 namespace ff
 {
+	class IModule;
+	class IComponentMgr;
+
 	/*
 		模块管理器
 	*/
-	class ModuleMgr : public Singleton<ModuleMgr>
+	class ModuleMgr
 	{
 	public:
 		void tick(int32_t delta);
@@ -45,7 +44,7 @@ namespace ff
 			SYS_VERIFY_RV(mod != nullptr, nullptr);
 
 			std::string name = typeid(MODULE).name();
-			SYS_VERIFY_RV(registerModule(name, mod, 0) != nullptr, nullptr);
+			SYS_VERIFY_RV(registerModule(name, mod) != nullptr, nullptr);
 
 			return mod;
 		}
@@ -59,7 +58,7 @@ namespace ff
 
 		IModule*	getModule(std::string name);
 		/*注册模块，order决定模块initialize的调用顺序*/
-		IModule*	registerModule(std::string name, IModule* module, int32_t order);
+		IModule*	registerModule(std::string name, IModule* module);
 
 		bool initialize();
 		void finalize();
@@ -69,8 +68,6 @@ namespace ff
 	private:
 		// 注册的所有模块
 		std::map<std::string, IModule*>	mModules;
-		std::multimap<int32_t, IModule*>	mOrderModules;
-
 		std::vector<IComponentMgr*>	mComponentMgrs;
 	};
 }

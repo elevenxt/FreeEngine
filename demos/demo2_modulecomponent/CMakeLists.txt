@@ -17,6 +17,10 @@ target_link_libraries(${PROJ_NAME}
 	base
 	launcher
 	cppformat
+	ut
+	${ws2_32}
+	${dl}
+	${pthread}
 	)
 
 set_target_properties(${PROJ_NAME} PROPERTIES FOLDER "basic.demo") 

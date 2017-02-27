@@ -14,10 +14,11 @@
 #include "SpinlockGuard.h"
 
 using namespace ff::demo;
+using namespace ff;
 
-bool ModuleClient::initialize()
+bool ModuleClient::initialize(ModuleMgr& mgr)
 {
-	ff::ModuleNetService* pNetService = ff::ModuleMgr::instance().getModule<ff::ModuleNetService>();
+	ff::ModuleNetService* pNetService = mgr.getModule<ff::ModuleNetService>();
 	SYS_VERIFY_RV(pNetService != nullptr, false);
 	mNet = pNetService->getService("chatclient");
 	SYS_VERIFY_RV(mNet->init(this, 1024), false);

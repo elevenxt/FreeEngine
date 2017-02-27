@@ -7,6 +7,8 @@
 
 #include "ModuleMgr.h"
 #include "base.h"
+#include "IModule.h"
+#include "IComponentMgr.h"
 
 using namespace ff;
 
@@ -30,7 +32,7 @@ IModule*	ModuleMgr::getModule(std::string name)
 	return iter->second;
 }
 
-IModule*	ModuleMgr::registerModule(std::string name, IModule* module, int32_t order)
+IModule*	ModuleMgr::registerModule(std::string name, IModule* module)
 {
 	if (mModules.find(name) != mModules.end() || module == nullptr)
 	{
@@ -44,17 +46,16 @@ IModule*	ModuleMgr::registerModule(std::string name, IModule* module, int32_t or
 	}
 
 	mModules[name] = module;
-	mOrderModules.insert(std::make_pair(order, module));
 
 	return module;
 }
 
 bool ModuleMgr::initialize()
 {
-	for (std::multimap<int32_t, IModule*>::iterator iter = mOrderModules.begin();
-		iter != mOrderModules.end(); ++iter)
+	for (std::map<std::string, IModule*>::iterator iter = mModules.begin();
+		iter != mModules.end(); ++iter)
 	{
-		if (!iter->second->initialize())
+		if (!iter->second->initialize(*this))
 		{
 			SYSLOG_ERROR("module {} initialize failed.", iter->first);
 			return false;
@@ -79,22 +80,21 @@ void ModuleMgr::finalize()
 		(*iter)->finalize();
 	}
 
-	for (std::multimap<int32_t, IModule*>::reverse_iterator iter = mOrderModules.rbegin();
-		iter != mOrderModules.rend(); ++iter)
+	for (std::map<std::string, IModule*>::iterator iter = mModules.begin();
+		iter != mModules.end(); ++iter)
 	{
 		iter->second->finalize();
 		delete iter->second;
 		SYSLOG_TRACE("module {} finalize over.", iter->first);
 	}
 
-	mOrderModules.clear();
 	mModules.clear();
 }
 
 void ModuleMgr::preStartLoop()
 {
-	for (std::multimap<int32_t, IModule*>::iterator iter = mOrderModules.begin();
-		iter != mOrderModules.end(); ++iter)
+	for (std::map<std::string, IModule*>::iterator iter = mModules.begin();
+		iter != mModules.end(); ++iter)
 	{
 		iter->second->preStartLoop();
 	}
