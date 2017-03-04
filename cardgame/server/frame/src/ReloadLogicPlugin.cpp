@@ -38,10 +38,12 @@ static bool copyFile(const char *srcFile, const char *dstPath)
 	int32_t lenR, lenW;
 	if ((fpR = fopen(srcFile, "rb")) == NULL)
 	{
+		SYSLOG_WARNING("open read file {} failed.", srcFile);
 		return false;
 	}
 	if ((fpW = fopen(dstPath, "wb")) == NULL)
 	{
+		SYSLOG_WARNING("open write file {} failed.", dstPath);
 		fclose(fpR);
 		return false;
 	}
@@ -53,6 +55,7 @@ static bool copyFile(const char *srcFile, const char *dstPath)
 		{
 			fclose(fpR);
 			fclose(fpW);
+			SYSLOG_WARNING("write file {} failed.", dstPath);
 			return false;
 		}
 		memset(buffer, 0, BUFFER_SIZE);
@@ -83,6 +86,7 @@ bool ReloadLogicPlugin::doReload()
 	std::string tmpName = dstDir + ValueOpt::convert(tt) + ValueOpt::convert(rand()) + "_tmpplugin.dll";
 	if (!copyFile(mFileName.c_str(), tmpName.c_str()))
 	{
+		SYSLOG_WARNING("copy file from {} to {} failed.", mFileName, tmpName);
 		return false;
 	}
 

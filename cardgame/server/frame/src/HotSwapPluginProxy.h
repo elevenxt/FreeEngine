@@ -18,6 +18,7 @@ namespace ff
 	{
 	public:
 		HotSwapPluginProxy();
+		bool good();
 		void reset(HotSwapPlugin* impl);
 
 		virtual bool init(HotSwapService* serve);

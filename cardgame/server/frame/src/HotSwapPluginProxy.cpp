@@ -9,6 +9,11 @@ HotSwapPluginProxy::HotSwapPluginProxy()
 	mImpl = nullptr;
 }
 
+bool HotSwapPluginProxy::good()
+{
+	return mImpl != nullptr;
+}
+
 void HotSwapPluginProxy::reset(HotSwapPlugin* impl)
 {
 	mImpl = impl;

@@ -11,6 +11,7 @@
 #include "ReloadMgr.h"
 #include "ReloadCfg.h"
 #include "ReloadLogicPlugin.h"
+#include "HotSwapPluginProxy.h"
 
 using namespace ff;
 
@@ -25,6 +26,9 @@ bool ModuleHotSwap::initialize(ff::ModuleMgr& mgr)
 	// 首次运行时，主动加载一次
 	ReloadMgr::instance().makeReload();
 	ReloadMgr::instance().confirmReload();
+
+	// 加查一下逻辑模块是否准备就绪
+	SYS_VERIFY_RV(HotSwapPluginProxy::instance().good(), false);
 
 	return true;
 }

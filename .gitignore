@@ -1,6 +1,5 @@
-/.svn
-cardgame/client/cardgame
-.idea
-__pycache__
-.pyc
-*.pyc
+cardgame/client/cardgame/
+bin/Debug/
+bin/cardgame/game.db/
+bin/cardgame/Debug/
+bin/cardgame/hstmp/
